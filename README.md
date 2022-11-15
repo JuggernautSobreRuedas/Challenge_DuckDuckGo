@@ -1,5 +1,6 @@
 # Challenge_DuckDuckGo
 Challenge de automatizacion de pruebas de DuckDuckGo
+
 Para ver como se ejecutan las pruebas desde el ejecutor de Cypress:
 
 1- Coloque en la terminal el comando: npm run cypress:open
