@@ -1,4 +1,4 @@
-/*describe("Search Result",()=>{
+describe("Search Result",()=>{
     beforeEach(()=>{
         cy.visit("https://duckduckgo.com/");
         cy.get("#search_form_input_homepage").type("Michael Jordan");
@@ -61,9 +61,9 @@ describe("Change Language",()=>{
             }
         })
         
-    })*/
+    })
 
-    it("algo",()=>{
+    it("Create url list when searching for dogs",()=>{
         cy.visit("https://duckduckgo.com/?q=dogs&ia=web")
         cy.get('[data-testid="result"] > .OQ_6vPwNhCeusNiEDcGp > .mwuQiMOjmFJ5vmN6Vcqw > [data-testid="result-extras-url-link"] > .Wo6ZAEmESLNUuWBkbMxx').then((response) => {
             cy.log(response.text().split("https://"))
@@ -72,4 +72,5 @@ describe("Change Language",()=>{
             }
             })
         })
-    
+
+    })
