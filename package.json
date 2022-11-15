@@ -1,0 +1,21 @@
+{
+  "name": "challenge-duckduckgo",
+  "version": "1.0.0",
+  "description": "Tests for duckduckgo",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "test",
+    "challenge",
+    "duckduckgo"
+  ],
+  "author": "Lautaro Nievas",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^11.0.1",
+    "cypress-mochawesome-reporter": "^3.2.3"
+  }
+}
