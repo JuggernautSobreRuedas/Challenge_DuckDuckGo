@@ -66,21 +66,30 @@ describe("Change Language",()=>{
 
 describe("Create list",()=>{
 
+    
+
     it("Create url list when search Dogecoin",()=>{
+        const filePathUrl = "cypress/fixtures/read-write/url_list.json"
+        const listaUrl = [];
         cy.visit("https://duckduckgo.com/?q=dogecoin&t=h_&ia=web");
         cy.get('.Rn_JXVtoPVAFyGkcaXyK').each(($el,index,$listOfElements) => {
             const href = $el.attr('href')
             cy.log(href)
+            listaUrl.push(href)
           })        
+          cy.writeFile(filePathUrl,listaUrl)
     })
 
     it("Create url list when search Dogs",()=>{
+        const filePathImg = "cypress/fixtures/read-write/img_list.json"
+        const listaImg = [];
         cy.visit("https://duckduckgo.com/?q=dogs&t=h_&ia=web");
         cy.get('.module--images__thumbnails__image').each(($el,index,$listOfElements) => {
-            const href = $el.attr('src')
-            cy.log(href)
-          })        
+            const src = $el.attr('src')
+            cy.log(src)
+            listaImg.push(src)
+          })
+          cy.writeFile(filePathImg,listaImg)        
     })
 
 })
-
